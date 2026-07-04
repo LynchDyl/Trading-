@@ -1,4 +1,4 @@
-# Trading Signals Bot — GOLD · NVDA · TSLA
+# Trading Signals Bot — GOLD · NVDA · TSLA + Day-Trading Scanner
 
 A daily trading-signals bot for gold (COMEX futures, `GC=F`), NVIDIA (`NVDA`)
 and Tesla (`TSLA`). It backtests seven classic short-term strategy families
@@ -55,13 +55,44 @@ Run with `python scripts/run_backtest.py`; the full report lands in
    out-of-sample Sharpe is written to `results/best_params.json`, with live
    parameters re-fit on the most recent 4 years.
 
+## Day-trading module (whole-market scanner)
+
+A second bot day-trades a **~50-symbol liquid US universe** (mega-caps,
+high-beta movers, index/commodity ETFs) on 5-minute bars. Design targets:
+**reward:risk fixed at 2:1 by construction** (every trade is a bracket:
+target = 2× stop distance, flat by 15:55 ET) and a **win rate ≥ 40%**
+enforced as a selection gate in *out-of-sample* data, not just in-sample.
+
+- Strategy families: Opening Range Breakout (with relative-volume filter),
+  gap-and-go continuation, VWAP pullback — long and short variants.
+- Backtest: pooled across the whole universe, chronological 60/40
+  train/test split, conservative fills (stop assumed to hit before target
+  when both are inside one bar), 6 bps round-trip costs.
+  Report: [`results/DAYTRADE_REPORT.md`](results/DAYTRADE_REPORT.md).
+- Yahoo only serves ~60 days of 5-minute bars, so the
+  `fetch-intraday` workflow runs nightly and **accumulates** history —
+  re-run `scripts/run_daytrade_backtest.py` as the sample grows.
+- Morning scan: the `intraday-signals` workflow runs after the opening
+  range completes (10:35 ET) and writes bracket orders — entry, stop,
+  2R target, and position size for a **£30 account risking 1.5% per
+  trade** — to [`signals/daytrade_latest.md`](signals/daytrade_latest.md).
+
+**£30 reality check:** at 1.5% risk you are risking ~45p per trade, which
+requires a zero-commission fractional-share broker (e.g. Trading 212
+Invest; UK accounts are not subject to the US pattern-day-trader rule).
+Expect small absolute numbers — this stake is for proving the process,
+not for income.
+
 ## Repo layout
 
 ```
 signals_bot/          # library: data, indicators, strategies, backtest, optimizer, signals
-scripts/fetch_data.py    # refresh data/*.csv from Yahoo Finance (yfinance)
-scripts/run_backtest.py  # full grid-search + walk-forward study -> results/
-scripts/run_signals.py   # emit today's signals -> signals/
+scripts/fetch_data.py    # refresh daily data/*.csv from Yahoo Finance
+scripts/fetch_intraday.py         # accumulate 5m/15m bars for the universe
+scripts/run_backtest.py  # daily-bar grid-search + walk-forward -> results/
+scripts/run_daytrade_backtest.py  # pooled intraday study -> results/
+scripts/run_signals.py   # emit swing signals -> signals/latest.md
+scripts/run_daytrade_signals.py   # morning bracket-order scan -> signals/
 data/                 # daily OHLCV CSVs (Date,Open,High,Low,Close,Volume)
 results/              # backtest report, summary.csv, best_params.json, charts
 signals/              # latest.md + history.csv

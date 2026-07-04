@@ -1,0 +1,46 @@
+name: Morning day-trade signals
+
+# Runs after the 30-minute opening range completes.
+# 14:35 UTC = 10:35 ET during US daylight saving (Mar-Nov).
+# Note: during US winter time this fires at 09:35 ET, before the range
+# completes — adjust to "35 15 * * 1-5" in November.
+on:
+  schedule:
+    - cron: "35 14 * * 1-5"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  signals:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install --quiet -r requirements.txt
+
+      - name: Scan for day-trade setups
+        run: |
+          python scripts/run_daytrade_signals.py
+          cat signals/daytrade_latest.md >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Commit signals
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add signals/
+          if git diff --cached --quiet; then
+            echo "No changes"
+          else
+            git commit -m "Day-trade signals $(date -u +%F)"
+            git pull --rebase origin "${{ github.ref_name }}" || true
+            git push
+          fi
