@@ -136,6 +136,31 @@ def tsmom(df: pd.DataFrame, lookback: int = 60, trend_n: int = 0,
     return pos
 
 
+def high_52w(df: pd.DataFrame, entry_q: float = 0.98, exit_q: float = 0.90,
+             n: int = 252) -> pd.Series:
+    """52-week-high momentum (George & Hwang): buy near the n-day high,
+    exit when price decays exit_q below that high."""
+    close = df["Close"]
+    roll_max = close.rolling(n, min_periods=n).max()
+    entries = (close >= entry_q * roll_max).to_numpy(na_value=False)
+    exits = (close < exit_q * roll_max).to_numpy(na_value=False)
+    return pd.Series(_state_positions(entries, exits), index=df.index)
+
+
+def turn_of_month(df: pd.DataFrame, days_before: int = 4,
+                  days_after: int = 3) -> pd.Series:
+    """Turn-of-month seasonality: long the last `days_before` trading days
+    of each month and the first `days_after` of the next."""
+    idx = df.index
+    month = pd.Series(idx.to_period("M"), index=idx)
+    # position within month (1-based) and from month end (1 = last day)
+    day_of = month.groupby(month).cumcount() + 1
+    days_in = month.map(month.value_counts())
+    from_end = days_in - day_of + 1
+    pos = ((from_end <= days_before) | (day_of <= days_after)).astype(float)
+    return pd.Series(pos.to_numpy(), index=idx)
+
+
 def buy_hold(df: pd.DataFrame) -> pd.Series:
     return pd.Series(1.0, index=df.index)
 
@@ -183,6 +208,14 @@ STRATEGIES: dict[str, StrategySpec] = {
     "tsmom": StrategySpec(
         "tsmom", tsmom,
         {"lookback": [10, 20, 60, 120], "trend_n": [0, 200], "allow_short": [False, True]},
+    ),
+    "high_52w": StrategySpec(
+        "high_52w", high_52w,
+        {"entry_q": [0.95, 0.98, 1.0], "exit_q": [0.85, 0.90], "n": [126, 252]},
+    ),
+    "turn_of_month": StrategySpec(
+        "turn_of_month", turn_of_month,
+        {"days_before": [3, 4, 5], "days_after": [1, 3, 5]},
     ),
 }
 

@@ -32,6 +32,13 @@ jobs:
           python scripts/run_signals.py
           cat signals/latest.md >> "$GITHUB_STEP_SUMMARY"
 
+      - name: Generate APEX ensemble signal
+        run: |
+          if [ -f results/apex_config.json ]; then
+            python scripts/run_apex_signals.py
+            cat signals/apex_latest.md >> "$GITHUB_STEP_SUMMARY"
+          fi
+
       - name: Commit data + signals
         run: |
           git config user.name "github-actions[bot]"
