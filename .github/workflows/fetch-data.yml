@@ -1,5 +1,6 @@
 name: Fetch market data
 
+# Refreshes data/*.csv from Yahoo Finance on demand.
 on:
   workflow_dispatch:
 
