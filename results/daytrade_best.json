@@ -1,0 +1,16 @@
+{
+  "strategy": "orb",
+  "params": {
+    "range_mins": 15,
+    "stop_mode": "half",
+    "allow_short": false,
+    "rvol_min": 1.5
+  },
+  "oos_win_rate": 0.4545,
+  "oos_expectancy_r": 0.0589,
+  "oos_n_trades": 121,
+  "reward_risk": 2.0,
+  "risk_fraction": 0.015,
+  "account_gbp": 30.0,
+  "data_through": "2026-07-02"
+}
