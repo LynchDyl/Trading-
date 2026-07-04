@@ -1,4 +1,4 @@
-# Trading Signals — 2026-07-04 10:34 UTC
+# Trading Signals — 2026-07-04 10:35 UTC
 
 | Instrument | Data date | Signal | Position | Close | Stop (2×ATR) | RSI(2) | 200d trend | Strategy |
 |---|---|---|---|---|---|---|---|---|
