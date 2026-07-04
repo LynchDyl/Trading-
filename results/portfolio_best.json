@@ -1,0 +1,16 @@
+{
+  "params": {
+    "universe": "aggressive",
+    "lookback": 63,
+    "top_n": 2,
+    "trend_filter": true,
+    "defensive": "IEF",
+    "rebalance": "M"
+  },
+  "oos_cagr": 0.2103,
+  "oos_sharpe": 0.709,
+  "oos_max_drawdown": -0.5433,
+  "oos_pct_positive_months": 0.5534,
+  "contribution_gbp_weekly": 50.0,
+  "data_through": "2026-07-02"
+}

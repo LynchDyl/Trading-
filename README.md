@@ -1,4 +1,28 @@
-# Trading Signals Bot — GOLD · NVDA · TSLA + Day-Trading Scanner
+# Trading Bots — Wealth-Builder (£50/week) · Swing Signals · Day-Trading Scanner
+
+## ⭐ Wealth-Builder: momentum rotation with weekly contributions
+
+The flagship bot. Every Monday it tells you where the week's **£50** goes;
+on the first trading day of each month it rebalances into the **top-2
+momentum assets** of an aggressive universe (QQQ, 2x/3x index ETFs, gold,
+bitcoin), holding each only while it trades above its 10-month average —
+otherwise the money retreats to 7-10y treasuries. Configuration was chosen
+by an ex-ante rule (drawdown-adjusted growth on pre-2018 data, minimum two
+holdings) and judged on 2018-2026 out-of-sample data — a window containing
+the 2018 correction, the 2020 crash and the 2022 bear market:
+
+| £50/week since 2018 | CAGR | Sharpe | Max DD | Final balance (£22.2k in) |
+|---|---|---|---|---|
+| **Momentum rotation (this bot)** | **21.0%** | 0.71 | **-54%** | **£71,282** |
+| QQQ buy-every-week | 20.4% | 0.90 | -35% | £56,224 |
+| SPY buy-every-week | 14.6% | 0.81 | -34% | £45,190 |
+| 60/40 | 9.6% | 0.85 | -21% | £34,668 |
+
+Read the -54% before the 21%: this configuration WILL halve at some point.
+The weekly signal lands in
+[`signals/portfolio_latest.md`](signals/portfolio_latest.md); the full
+study (192 configurations, overfitting exhibits, month-by-month tables) is
+in [`results/PORTFOLIO_REPORT.md`](results/PORTFOLIO_REPORT.md).
 
 A daily trading-signals bot for gold (COMEX futures, `GC=F`), NVIDIA (`NVDA`)
 and Tesla (`TSLA`). It backtests seven classic short-term strategy families
