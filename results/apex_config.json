@@ -1,0 +1,72 @@
+{
+  "components": [
+    {
+      "name": "rotation:aggressive 63/top2",
+      "weight": 0.2,
+      "type": "rotation",
+      "params": {
+        "universe": "aggressive",
+        "lookback": 63,
+        "top_n": 2,
+        "trend_filter": true,
+        "defensive": "IEF",
+        "rebalance": "M"
+      }
+    },
+    {
+      "name": "swing:ma_cross:SSO",
+      "weight": 0.2,
+      "type": "swing",
+      "asset": "SSO",
+      "strategy": "ma_cross",
+      "params": {
+        "fast": 5,
+        "slow": 20,
+        "use_ema": true,
+        "allow_short": false
+      }
+    },
+    {
+      "name": "rotation:core blend/top3",
+      "weight": 0.2,
+      "type": "rotation",
+      "params": {
+        "universe": "core",
+        "lookback": "blend",
+        "top_n": 3,
+        "trend_filter": true,
+        "defensive": "IEF",
+        "rebalance": "W"
+      }
+    },
+    {
+      "name": "swing:tsmom:QQQ",
+      "weight": 0.2,
+      "type": "swing",
+      "asset": "QQQ",
+      "strategy": "tsmom",
+      "params": {
+        "lookback": 120,
+        "trend_n": 200,
+        "allow_short": false
+      }
+    },
+    {
+      "name": "swing:tsmom:SHY",
+      "weight": 0.2,
+      "type": "swing",
+      "asset": "SHY",
+      "strategy": "tsmom",
+      "params": {
+        "lookback": 120,
+        "trend_n": 200,
+        "allow_short": true
+      }
+    }
+  ],
+  "oos_avg_week": 0.00228,
+  "oos_pct_pos_weeks": 0.5721,
+  "oos_cagr": 0.1124,
+  "oos_max_dd": -0.2412,
+  "generated": "2026-07-04 11:31 UTC"
+}

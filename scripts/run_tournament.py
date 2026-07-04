@@ -43,6 +43,7 @@ CHARTS = RESULTS / "charts"
 
 MIN_WEEKS = 150
 MIN_POS_WEEKS = 0.45
+MIN_AVG_WEEK = 0.0005      # >= 0.05%/week — no dead-weight ballast components
 ENSEMBLE_K = 5
 
 
@@ -184,7 +185,7 @@ def main():
     qual = [r for r in rows
             if r[3] is not None and r[4] is not None
             and r[2]["n_weeks"] >= MIN_WEEKS
-            and r[2]["avg_week"] > 0
+            and r[2]["avg_week"] > MIN_AVG_WEEK
             and r[2]["pct_pos_weeks"] >= MIN_POS_WEEKS]
     # at most one component per asset (avoid 5 flavours of NVDA momentum)
     seen_assets, picks = set(), []
