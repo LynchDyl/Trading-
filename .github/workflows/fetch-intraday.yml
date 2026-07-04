@@ -1,0 +1,42 @@
+name: Fetch intraday data
+
+# Accumulates 5m/15m bars for the day-trading universe (Yahoo only serves
+# ~60 trailing days, so this runs on a schedule to build history over time).
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "45 21 * * 1-5"   # nightly after the US close
+
+permissions:
+  contents: write
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install --quiet yfinance pandas
+
+      - name: Fetch intraday bars
+        run: python scripts/fetch_intraday.py
+
+      - name: Commit updated data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/intraday/
+          if git diff --cached --quiet; then
+            echo "No data changes"
+          else
+            git commit -m "Update intraday data (automated fetch)"
+            git pull --rebase origin "${{ github.ref_name }}" || true
+            git push
+          fi
