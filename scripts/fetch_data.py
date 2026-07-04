@@ -16,6 +16,24 @@ INSTRUMENTS = {
     "GOLD": "GC=F",   # COMEX gold futures, front month
     "NVDA": "NVDA",
     "TSLA": "TSLA",
+    # portfolio-rotation universe (broad ETFs, long histories)
+    "SPY": "SPY",     # S&P 500
+    "QQQ": "QQQ",     # Nasdaq 100
+    "IWM": "IWM",     # US small caps
+    "EFA": "EFA",     # developed international
+    "EEM": "EEM",     # emerging markets
+    "VNQ": "VNQ",     # US REITs
+    "GLD": "GLD",     # gold ETF
+    "SLV": "SLV",     # silver ETF
+    "TLT": "TLT",     # 20y+ treasuries
+    "IEF": "IEF",     # 7-10y treasuries (defensive)
+    "SHY": "SHY",     # 1-3y treasuries (cash proxy)
+    "DBC": "DBC",     # broad commodities
+    # aggressive sleeve (leveraged index ETFs + crypto)
+    "SSO": "SSO",     # 2x S&P 500
+    "TQQQ": "TQQQ",   # 3x Nasdaq 100
+    "UPRO": "UPRO",   # 3x S&P 500
+    "BTC": "BTC-USD", # bitcoin
 }
 
 DATA_DIR = Path(__file__).resolve().parents[1] / "data"
