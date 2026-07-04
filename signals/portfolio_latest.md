@@ -1,4 +1,4 @@
-# Wealth-Builder Allocation — 2026-07-04 11:07 UTC
+# Wealth-Builder Allocation — 2026-07-04 11:08 UTC
 
 Config: `aggressive` universe, lookback=63, top 2, trend filter ON, defensive IEF, rebalanced every month. Data through **2026-07-02**.
 
