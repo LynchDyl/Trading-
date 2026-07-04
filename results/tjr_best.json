@@ -1,0 +1,16 @@
+{
+  "strategy": "tjr",
+  "params": {
+    "liq": "both",
+    "window_end": "11:30",
+    "fvg_entry": "edge",
+    "allow_short": false
+  },
+  "passed_gates": false,
+  "oos_win_rate": 0.3909,
+  "oos_expectancy_r": -0.0873,
+  "oos_n_trades": 110,
+  "account_gbp": 100.0,
+  "risk_fraction": 0.01,
+  "data_through": "2026-07-02"
+}

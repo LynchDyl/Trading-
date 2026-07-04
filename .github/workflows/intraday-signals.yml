@@ -32,6 +32,11 @@ jobs:
           python scripts/run_daytrade_signals.py
           cat signals/daytrade_latest.md >> "$GITHUB_STEP_SUMMARY"
 
+      - name: Scan for TJR setups (paper only)
+        run: |
+          python scripts/run_tjr_signals.py
+          cat signals/tjr_latest.md >> "$GITHUB_STEP_SUMMARY"
+
       - name: Commit signals
         run: |
           git config user.name "github-actions[bot]"

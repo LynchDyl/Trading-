@@ -293,6 +293,8 @@ def run_symbol(symbol: str, df: pd.DataFrame, strategy: str, params: dict,
 
 def _update_prev(prev: dict, bars: pd.DataFrame, range_vol: float):
     prev["close"] = float(bars["Close"].iloc[-1])
+    prev["high"] = float(bars["High"].max())
+    prev["low"] = float(bars["Low"].min())
     hist = prev.setdefault("range_vols", [])
     hist.append(float(range_vol))
     if len(hist) > 14:

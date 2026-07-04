@@ -101,6 +101,19 @@ enforced as a selection gate in *out-of-sample* data, not just in-sample.
   2R target, and position size for a **£30 account risking 1.5% per
   trade** — to [`signals/daytrade_latest.md`](signals/daytrade_latest.md).
 
+### TJR strategy (smart-money concepts) — tested, currently paper-only
+
+A mechanical implementation of TJR's playbook (liquidity sweep → market
+structure shift → fair-value-gap retrace, 2:1 bracket, NY morning) lives in
+`signals_bot/tjr.py` and is scanned every morning into
+[`signals/tjr_latest.md`](signals/tjr_latest.md). The verdict from the full
+backtest ([`results/TJR_REPORT.md`](results/TJR_REPORT.md)): **all 16 rule
+variants had negative expectancy after costs, in train AND test** (best:
+41% win rate but −0.03R). A £100 account taking every signal ended at
+£97.93 out-of-sample. The scanner is kept for paper-trading and study —
+the pattern's edge, if any, appears to live in the discretion of the
+trader, which rules can't capture. Do not fund it on this evidence.
+
 **£30 reality check:** at 1.5% risk you are risking ~45p per trade, which
 requires a zero-commission fractional-share broker (e.g. Trading 212
 Invest; UK accounts are not subject to the US pattern-day-trader rule).
