@@ -57,7 +57,7 @@ def metrics_table(rows: dict[str, dict], cols: list[str]) -> str:
 
 
 def equity_chart(curves: dict[str, pd.Series], title: str, path: Path,
-                 log_scale: bool = False):
+                 log_scale: bool = False, ylabel: str = "Growth of $1"):
     """Plot equity curves (dict label -> equity series starting at 1.0)."""
     fig, ax = plt.subplots(figsize=(10, 5), dpi=150)
     for i, (label, eq) in enumerate(curves.items()):
@@ -67,7 +67,7 @@ def equity_chart(curves: dict[str, pd.Series], title: str, path: Path,
         ax.annotate(f" {label}", xy=(eq.index[-1], eq.values[-1]),
                     color=color, fontsize=9, va="center")
     ax.set_title(title, loc="left", fontsize=12, color=INK)
-    ax.set_ylabel("Growth of $1")
+    ax.set_ylabel(ylabel)
     if log_scale:
         ax.set_yscale("log")
     ax.grid(True, axis="y")

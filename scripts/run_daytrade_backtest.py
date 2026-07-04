@@ -196,7 +196,7 @@ def main():
             report.equity_chart(
                 {"all signals": curve_all, "1 trade/day": curve_one},
                 f"£{START_GBP:.0f} account — {sname} out-of-sample",
-                CHARTS / "daytrade_equity.png")
+                CHARTS / "daytrade_equity.png", ylabel="Account (£)")
         # R histogram
         import matplotlib.pyplot as plt
         fig, ax = plt.subplots(figsize=(9, 4), dpi=150)
