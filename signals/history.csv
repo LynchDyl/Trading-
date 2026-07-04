@@ -1,0 +1,6 @@
+instrument,date,strategy,action,position,close,atr14,suggested_stop,rsi2,trend_200d,oos_sharpe,params
+GOLD,2025-06-06,tsmom,HOLD LONG,LONG,3368.94,66.44,3236.06,65.5,UP,0.42,"{""lookback"": 120, ""trend_n"": 0, ""allow_short"": false}"
+NVDA,2026-04-13,donchian_breakout,HOLD LONG,LONG,188.34,5.28,177.77,91.8,UP,0.831,"{""entry_n"": 10, ""exit_n"": 5, ""allow_short"": false}"
+GOLD,2026-07-03,tsmom,STAY FLAT,FLAT,4187.3,93.36,,95.6,DOWN,0.596,"{""lookback"": 60, ""trend_n"": 0, ""allow_short"": false}"
+NVDA,2026-07-02,donchian_breakout,STAY FLAT,FLAT,194.83,7.12,,26.6,UP,0.83,"{""entry_n"": 10, ""exit_n"": 5, ""allow_short"": false}"
+TSLA,2026-07-02,ma_cross,STAY FLAT,FLAT,393.45,19.62,,21.6,DOWN,0.702,"{""fast"": 10, ""slow"": 20, ""use_ema"": false, ""allow_short"": false}"

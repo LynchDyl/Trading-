@@ -1,0 +1,42 @@
+{
+  "GOLD": {
+    "strategy": "tsmom",
+    "params": {
+      "lookback": 60,
+      "trend_n": 0,
+      "allow_short": false
+    },
+    "oos_sharpe": 0.596,
+    "oos_cagr": 0.0795,
+    "oos_max_drawdown": -0.323,
+    "oos_win_rate": 0.4177,
+    "data_through": "2026-07-03"
+  },
+  "NVDA": {
+    "strategy": "donchian_breakout",
+    "params": {
+      "entry_n": 10,
+      "exit_n": 5,
+      "allow_short": false
+    },
+    "oos_sharpe": 0.83,
+    "oos_cagr": 0.256,
+    "oos_max_drawdown": -0.6916,
+    "oos_win_rate": 0.4609,
+    "data_through": "2026-07-02"
+  },
+  "TSLA": {
+    "strategy": "ma_cross",
+    "params": {
+      "fast": 10,
+      "slow": 20,
+      "use_ema": false,
+      "allow_short": false
+    },
+    "oos_sharpe": 0.702,
+    "oos_cagr": 0.2271,
+    "oos_max_drawdown": -0.6978,
+    "oos_win_rate": 0.4074,
+    "data_through": "2026-07-02"
+  }
+}
