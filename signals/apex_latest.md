@@ -1,6 +1,6 @@
-# APEX Ensemble Signal — 2026-07-07 22:38 UTC
+# APEX Ensemble Signal — 2026-07-08 22:33 UTC
 
-Tournament-validated ensemble (out-of-sample: avg week +0.23%, 57% positive weeks, CAGR 11.2%, max DD -24%). Data through **2026-07-07**.
+Tournament-validated ensemble (out-of-sample: avg week +0.23%, 57% positive weeks, CAGR 11.2%, max DD -24%). Data through **2026-07-08**.
 
 ## Components
 
@@ -8,7 +8,7 @@ Tournament-validated ensemble (out-of-sample: avg week +0.23%, 57% positive week
 |---|---|---|
 | `rotation:aggressive 63/top2` | 20% | UPRO 50%, TQQQ 50% |
 | `swing:ma_cross:SSO` | 20% | **LONG** SSO |
-| `rotation:core blend/top3` | 20% | QQQ 33%, EEM 33%, IWM 33% |
+| `rotation:core blend/top3` | 20% | EEM 33%, IWM 33%, QQQ 33% |
 | `swing:tsmom:QQQ` | 20% | **LONG** QQQ |
 | `swing:tsmom:SHY` | 20% | **LONG** SHY |
 
