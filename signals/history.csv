@@ -13,3 +13,6 @@ TSLA,2026-07-07,ma_cross,STAY FLAT,FLAT,402.9,20.15,,38.2,DOWN,0.702,"{""fast"":
 GOLD,2026-07-08,tsmom,STAY FLAT,FLAT,4083.6,88.53,,22.4,DOWN,0.596,"{""lookback"": 60, ""trend_n"": 0, ""allow_short"": false}"
 NVDA,2026-07-08,donchian_breakout,BUY (open long),LONG,204.12,7.12,189.87,93.8,UP,0.83,"{""entry_n"": 10, ""exit_n"": 5, ""allow_short"": false}"
 TSLA,2026-07-08,ma_cross,BUY (open long),LONG,394.06,19.6,354.87,26.5,DOWN,0.702,"{""fast"": 10, ""slow"": 20, ""use_ema"": false, ""allow_short"": false}"
+GOLD,2026-07-09,tsmom,STAY FLAT,FLAT,4132.1,88.78,,63.8,DOWN,0.596,"{""lookback"": 60, ""trend_n"": 0, ""allow_short"": false}"
+NVDA,2026-07-09,donchian_breakout,HOLD LONG,LONG,202.78,7.02,188.74,71.9,UP,0.83,"{""entry_n"": 10, ""exit_n"": 5, ""allow_short"": false}"
+TSLA,2026-07-09,ma_cross,HOLD LONG,LONG,406.55,19.41,367.73,60.5,DOWN,0.702,"{""fast"": 10, ""slow"": 20, ""use_ema"": false, ""allow_short"": false}"
