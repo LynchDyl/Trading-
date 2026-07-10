@@ -70,6 +70,57 @@ cowboy boots in the photo. Follower frameworks (e.g. Nether's Follower
 Framework, if your list includes one) pick her up like any standard
 recruitable NPC.
 
+## Making her look *exactly* like the photo
+
+A photo-accurate face can't be authored in a raw plugin — it has to be
+sculpted. There are two workflows; both start the same way:
+
+**Step 1 — sculpt the face in RaceMenu (in-game).**
+Open the console, type `showracemenu`, and build the face on a female Nord
+using the photo as reference. Blood and Lust already ships everything that
+makes this look good: High Poly Head, quality skin textures, and KS Hairdos
+(pick a long, center-parted wavy style in warm blonde). Match the features —
+soft jawline, light brows, subtle pink lips, fair complexion — then save the
+preset (Presets tab → `F5`). Sculpting by eye honestly beats every
+photo-to-3D tool; take your time with the nose/jaw/eye sliders at
+head-on and profile angles.
+
+**Route A — no Creation Kit, applied in-game (recommended):**
+1. Install [Project Proteus](https://www.nexusmods.com/skyrimspecialedition/mods/62934)
+   (SKSE mod, safe to add mid-playthrough).
+2. Spawn Sunniva, point at her, open Proteus → NPC → *Appearance* and apply
+   your saved RaceMenu preset to her.
+3. If Proteus won't retarget her directly (her looks are templated), apply
+   the preset to **Jordis the Sword-Maiden** instead — Sunniva mirrors
+   Jordis's appearance 1:1, so changing the source changes her.
+
+This is per-save (Proteus stores overrides with your save), which is fine
+for personal use.
+
+**Route B — baked into the plugin (permanent, shareable):**
+1. In SSEEdit: open `SunnivaFollower.esp`, remove the `TPLT` subrecord and
+   set the ACBS template flags from `0x0B` to `0`.
+2. In the Creation Kit (with your hair/eye mods loaded so their parts are
+   available), open `SUNV_Sunniva`, recreate the face — you can import the
+   RaceMenu sculpt via the classic head-swap pipeline: export the head from
+   RaceMenu's Sculpt tab, then after the CK's `Ctrl+F4` FaceGen export,
+   replace `meshes/actors/character/facegendata/facegeom/SunnivaFollower.esp/00000800.nif`
+   (and the matching tint `.dds` under `facetint/`) with the RaceMenu export.
+3. `Ctrl+F4` (FaceGen export) is the step that prevents the grey-face bug —
+   never skip it after any face edit.
+4. If you used KS Hairdos parts, that hair mod becomes a master of the
+   plugin — keep it enabled.
+
+The [Nexus wiki follower tutorial](https://wiki.nexusmods.com/index.php/Adding_a_Follower_NPC_to_Skyrim)
+covers Route B's CK side in detail.
+
+**Body/height:** her body shape follows your installed BodySlide preset
+automatically; tweak `NAM7` (weight) and `NAM6` (height) in
+`generate_esp.py` for build.
+
+One courtesy note: if the face is modeled on a real person and you ever
+publish the mod, get their OK first.
+
 ## Customizing
 
 Regenerate the plugin after editing `generate_esp.py`:
