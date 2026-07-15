@@ -1,4 +1,4 @@
-# TJR Setups — 2026-07-14 16:02 UTC
+# TJR Setups — 2026-07-15 16:07 UTC
 
 > ⚠️ **PAPER TRADING ONLY.** The backtest found no positive expectancy for this pattern after costs (see `results/TJR_REPORT.md`). Track it, don't fund it.
 
@@ -6,8 +6,8 @@ Rules: `{'liq': 'both', 'window_end': '11:30', 'fvg_entry': 'edge', 'allow_short
 
 | Symbol | Side | Setup time (ET) | Entry | Stop | Target (2R) | Risk % | Paper position £ | Last |
 |---|---|---|---|---|---|---|---|---|
-| **QQQ** | LONG | 11:50:00 | 719.89 | 716.54 | 726.59 | 0.47% | £100.00 | 718.50 |
-| **MU** | LONG | 11:30:00 | 979.99 | 967.15 | 1005.67 | 1.31% | £76.32 | 979.07 |
-| **QCOM** | LONG | 11:15:00 | 182.31 | 180.51 | 185.91 | 0.99% | £100.00 | 179.54 |
+| **MARA** | LONG | 11:35:00 | 11.93 | 11.75 | 12.29 | 1.51% | £66.24 | 11.68 |
+| **JPM** | LONG | 10:35:00 | 347.53 | 344.05 | 354.49 | 1.00% | £99.86 | 349.38 |
+| **WMT** | LONG | 11:05:00 | 113.86 | 113.43 | 114.71 | 0.37% | £100.00 | 114.38 |
 
 *Automated research output — not financial advice.*
