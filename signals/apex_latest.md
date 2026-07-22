@@ -1,6 +1,6 @@
-# APEX Ensemble Signal — 2026-07-21 22:28 UTC
+# APEX Ensemble Signal — 2026-07-22 22:34 UTC
 
-Tournament-validated ensemble (out-of-sample: avg week +0.23%, 57% positive weeks, CAGR 11.2%, max DD -24%). Data through **2026-07-21**.
+Tournament-validated ensemble (out-of-sample: avg week +0.23%, 57% positive weeks, CAGR 11.2%, max DD -24%). Data through **2026-07-22**.
 
 ## Components
 
