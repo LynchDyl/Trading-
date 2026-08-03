@@ -1,13 +1,13 @@
-# Wealth-Builder Allocation — 2026-07-27 14:11 UTC
+# Wealth-Builder Allocation — 2026-08-03 14:17 UTC
 
-Config: `aggressive` universe, lookback=63, top 2, trend filter ON, defensive IEF, rebalanced every month. Data through **2026-07-27**.
+Config: `aggressive` universe, lookback=63, top 2, trend filter ON, defensive IEF, rebalanced every month. Data through **2026-08-03**.
 
 ## Current target allocation
 
 | Asset | Weight | This week's £50 |
 |---|---|---|
 | **UPRO** | 50% | £25.00 |
-| **TQQQ** | 50% | £25.00 |
+| **SSO** | 50% | £25.00 |
 
 Put this week's contribution into the targets above. Rebalance the whole account to these weights on the first trading day of each month (fractional shares, zero-commission broker).
 
@@ -15,12 +15,12 @@ Put this week's contribution into the targets above. Rebalance the whole account
 
 | Asset | Momentum | Above 10-mo SMA |
 |---|---|---|
-| UPRO | +10.9% | yes |
-| TQQQ | +8.0% | yes |
-| SSO | +7.9% | yes |
-| QQQ | +5.1% | yes |
-| GLD | -13.3% | NO |
-| BTC | -16.7% | NO |
+| UPRO | +11.1% | yes |
+| SSO | +8.1% | yes |
+| QQQ | +2.9% | yes |
+| TQQQ | +1.2% | yes |
+| GLD | -12.6% | NO |
+| BTC | -18.9% | NO |
 
 Backtest evidence: `results/PORTFOLIO_REPORT.md` (out-of-sample CAGR 21.0%, max drawdown -54%).
 
