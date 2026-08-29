@@ -1,12 +1,12 @@
-# APEX Ensemble Signal — 2026-08-28 05:32 UTC
+# APEX Ensemble Signal — 2026-08-29 03:16 UTC
 
-Tournament-validated ensemble (out-of-sample: avg week +0.23%, 57% positive weeks, CAGR 11.2%, max DD -24%). Data through **2026-08-27**.
+Tournament-validated ensemble (out-of-sample: avg week +0.23%, 57% positive weeks, CAGR 11.2%, max DD -24%). Data through **2026-08-28**.
 
 ## Components
 
 | Component | Weight | Current stance |
 |---|---|---|
-| `rotation:aggressive 63/top2` | 20% | UPRO 50%, BTC 50% |
+| `rotation:aggressive 63/top2` | 20% | BTC 50%, SSO 50% |
 | `swing:ma_cross:SSO` | 20% | **LONG** SSO |
 | `rotation:core blend/top3` | 20% | EEM 33%, DBC 33%, IWM 33% |
 | `swing:tsmom:QQQ` | 20% | **LONG** QQQ |
@@ -16,10 +16,9 @@ Tournament-validated ensemble (out-of-sample: avg week +0.23%, 57% positive week
 
 | Instrument | Target % of account |
 |---|---|
-| **SSO** | +20.0% |
+| **SSO** | +30.0% |
 | **QQQ** | +20.0% |
 | **SHY** | +20.0% |
-| **UPRO** | +10.0% |
 | **BTC** | +10.0% |
 | **EEM** | +6.7% |
 | **DBC** | +6.7% |
