@@ -1,6 +1,6 @@
-# Wealth-Builder Allocation — 2026-09-14 17:16 UTC
+# Wealth-Builder Allocation — 2026-09-21 17:27 UTC
 
-Config: `aggressive` universe, lookback=63, top 2, trend filter ON, defensive IEF, rebalanced every month. Data through **2026-09-14**.
+Config: `aggressive` universe, lookback=63, top 2, trend filter ON, defensive IEF, rebalanced every month. Data through **2026-09-21**.
 
 ## Current target allocation
 
@@ -15,12 +15,12 @@ Put this week's contribution into the targets above. Rebalance the whole account
 
 | Asset | Momentum | Above 10-mo SMA |
 |---|---|---|
-| BTC | +24.0% | yes |
-| UPRO | +5.5% | yes |
-| SSO | +4.3% | yes |
-| GLD | +2.3% | NO |
-| QQQ | -1.2% | yes |
-| TQQQ | -9.4% | yes |
+| BTC | +34.4% | yes |
+| UPRO | +8.8% | yes |
+| SSO | +6.4% | yes |
+| GLD | +3.5% | NO |
+| QQQ | +0.1% | yes |
+| TQQQ | -5.2% | yes |
 
 Backtest evidence: `results/PORTFOLIO_REPORT.md` (out-of-sample CAGR 21.0%, max drawdown -54%).
 
