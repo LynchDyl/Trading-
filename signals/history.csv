@@ -167,3 +167,6 @@ GOLD,2026-09-18,tsmom,HOLD LONG,LONG,4415.9,108.68,4198.54,83.7,DOWN,0.596,"{""l
 GOLD,2026-09-21,tsmom,HOLD LONG,LONG,4410.0,103.98,4202.04,55.1,DOWN,0.596,"{""lookback"": 60, ""trend_n"": 0, ""allow_short"": false}"
 NVDA,2026-09-18,donchian_breakout,STAY FLAT,FLAT,222.27,6.41,,91.6,UP,0.83,"{""entry_n"": 10, ""exit_n"": 5, ""allow_short"": false}"
 TSLA,2026-09-18,ma_cross,HOLD LONG,LONG,364.27,13.2,337.86,62.4,DOWN,0.702,"{""fast"": 10, ""slow"": 20, ""use_ema"": false, ""allow_short"": false}"
+GOLD,2026-09-22,tsmom,HOLD LONG,LONG,4402.1,99.44,4203.23,57.0,DOWN,0.596,"{""lookback"": 60, ""trend_n"": 0, ""allow_short"": false}"
+NVDA,2026-09-22,donchian_breakout,STAY FLAT,FLAT,228.87,6.23,,97.5,UP,0.83,"{""entry_n"": 10, ""exit_n"": 5, ""allow_short"": false}"
+TSLA,2026-09-22,ma_cross,HOLD LONG,LONG,378.9,12.86,353.18,93.7,DOWN,0.702,"{""fast"": 10, ""slow"": 20, ""use_ema"": false, ""allow_short"": false}"
