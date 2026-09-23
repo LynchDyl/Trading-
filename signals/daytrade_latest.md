@@ -1,13 +1,7 @@
-# Day-Trade Signals — 2026-09-22 18:15 UTC
+# Day-Trade Signals — 2026-09-23 18:35 UTC
 
 Strategy: `orb` {'range_mins': 15, 'stop_mode': 'half', 'allow_short': False, 'rvol_min': 1.5} — every order is a 2:1 reward:risk bracket, flat by 15:55 ET. Sized for a £30 account risking 1.5% per trade (fractional shares).
 
-| Symbol | Side | Status | Entry | Stop | Target (2R) | Risk % | Position £ | Last |
-|---|---|---|---|---|---|---|---|---|
-| **SOFI** | LONG | ARMED | 17.96 | 17.73 | 18.41 | 1.25% | £30.00 | 17.16 |
-| **BABA** | LONG | ARMED | 120.40 | 119.58 | 122.03 | 0.68% | £30.00 | 116.33 |
-| **SHOP** | LONG | TRIGGERED | 149.58 | 146.92 | 154.91 | 1.78% | £25.26 | 148.08 |
-
-3 setups. TRIGGERED = already through the entry level; ARMED = stage a stop-entry order at the level. One position at a time on a small account — prefer the first TRIGGERED signal.
+**No setups in the universe today.**
 
 *Automated research output — not financial advice.*
