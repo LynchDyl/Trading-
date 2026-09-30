@@ -1,6 +1,6 @@
-# APEX Ensemble Signal — 2026-09-29 01:11 UTC
+# APEX Ensemble Signal — 2026-09-30 00:41 UTC
 
-Tournament-validated ensemble (out-of-sample: avg week +0.23%, 57% positive weeks, CAGR 11.2%, max DD -24%). Data through **2026-09-25**.
+Tournament-validated ensemble (out-of-sample: avg week +0.23%, 57% positive weeks, CAGR 11.2%, max DD -24%). Data through **2026-09-28**.
 
 ## Components
 
@@ -8,9 +8,9 @@ Tournament-validated ensemble (out-of-sample: avg week +0.23%, 57% positive week
 |---|---|---|
 | `rotation:aggressive 63/top2` | 20% | UPRO 50%, BTC 50% |
 | `swing:ma_cross:SSO` | 20% | **LONG** SSO |
-| `rotation:core blend/top3` | 20% | QQQ 33%, EEM 33%, DBC 33% |
+| `rotation:core blend/top3` | 20% | EEM 33%, DBC 33%, QQQ 33% |
 | `swing:tsmom:QQQ` | 20% | **LONG** QQQ |
-| `swing:tsmom:SHY` | 20% | **FLAT** SHY |
+| `swing:tsmom:SHY` | 20% | **SHORT** SHY |
 
 ## Net account allocation
 
@@ -18,11 +18,12 @@ Tournament-validated ensemble (out-of-sample: avg week +0.23%, 57% positive week
 |---|---|
 | **QQQ** | +26.7% |
 | **SSO** | +20.0% |
+| **SHY** | -20.0% |
 | **UPRO** | +10.0% |
 | **BTC** | +10.0% |
 | **EEM** | +6.7% |
 | **DBC** | +6.7% |
-| cash | 20.0% |
+| cash | 40.0% |
 
 Rebalance to these targets; positions change on daily closes (swing components) and monthly/weekly rebalances (rotation). See `results/TOURNAMENT_REPORT.md` for the evidence behind each component.
 
