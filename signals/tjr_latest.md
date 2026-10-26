@@ -1,4 +1,4 @@
-# TJR Setups — 2026-10-23 18:40 UTC
+# TJR Setups — 2026-10-26 20:06 UTC
 
 > ⚠️ **PAPER TRADING ONLY.** The backtest found no positive expectancy for this pattern after costs (see `results/TJR_REPORT.md`). Track it, don't fund it.
 
@@ -6,12 +6,9 @@ Rules: `{'liq': 'both', 'window_end': '11:30', 'fvg_entry': 'edge', 'allow_short
 
 | Symbol | Side | Setup time (ET) | Entry | Stop | Target (2R) | Risk % | Paper position £ | Last |
 |---|---|---|---|---|---|---|---|---|
-| **IWM** | LONG | 11:05:00 | 275.34 | 273.85 | 278.32 | 0.54% | £100.00 | 275.51 |
-| **XLF** | LONG | 13:05:00 | 55.91 | 55.81 | 56.12 | 0.19% | £100.00 | 55.94 |
-| **AMZN** | LONG | 11:00:00 | 248.73 | 247.76 | 250.65 | 0.39% | £100.00 | 248.20 |
-| **PLTR** | LONG | 12:20:00 | 195.56 | 194.25 | 198.18 | 0.67% | £100.00 | 195.76 |
-| **HOOD** | LONG | 11:00:00 | 96.34 | 95.27 | 98.47 | 1.11% | £90.26 | 95.42 |
-| **PYPL** | LONG | 13:10:00 | 57.02 | 56.84 | 57.38 | 0.32% | £100.00 | 57.14 |
-| **SBUX** | LONG | 11:40:00 | 101.35 | 101.06 | 101.93 | 0.29% | £100.00 | 100.68 |
+| **GOOGL** | LONG | 12:45:00 | 318.73 | 317.60 | 320.99 | 0.35% | £100.00 | 316.89 |
+| **SMCI** | LONG | 11:50:00 | 33.04 | 32.68 | 33.76 | 1.09% | £91.70 | 32.68 |
+| **CAT** | LONG | 10:25:00 | 684.99 | 679.91 | 695.15 | 0.74% | £100.00 | 691.78 |
+| **RIVN** | LONG | 10:25:00 | 11.62 | 11.56 | 11.75 | 0.56% | £100.00 | 11.43 |
 
 *Automated research output — not financial advice.*
