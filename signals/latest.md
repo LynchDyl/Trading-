@@ -1,8 +1,8 @@
-# Trading Signals — 2026-11-03 03:00 UTC
+# Trading Signals — 2026-11-04 01:34 UTC
 
 | Instrument | Data date | Signal | Position | Close | Stop (2×ATR) | RSI(2) | 200d trend | Strategy |
 |---|---|---|---|---|---|---|---|---|
-| **GOLD** | 2026-11-02 | **STAY FLAT** | FLAT | 3959.1 | — | 45.6 | DOWN | `tsmom` |
+| **GOLD** | 2026-11-03 | **STAY FLAT** | FLAT | 3960.4 | — | 44.0 | DOWN | `tsmom` |
 | **NVDA** | 2026-11-02 | **STAY FLAT** | FLAT | 202.06 | — | 3.7 | DOWN | `donchian_breakout` |
 | **TSLA** | 2026-11-02 | **HOLD LONG** | LONG | 403.82 | 376.49 | 69.3 | UP | `ma_cross` |
 
