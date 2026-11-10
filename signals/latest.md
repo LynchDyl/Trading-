@@ -1,10 +1,10 @@
-# Trading Signals — 2026-11-07 01:04 UTC
+# Trading Signals — 2026-11-10 03:44 UTC
 
 | Instrument | Data date | Signal | Position | Close | Stop (2×ATR) | RSI(2) | 200d trend | Strategy |
 |---|---|---|---|---|---|---|---|---|
-| **GOLD** | 2026-11-06 | **STAY FLAT** | FLAT | 4079.5 | — | 57.8 | DOWN | `tsmom` |
-| **NVDA** | 2026-11-05 | **STAY FLAT** | FLAT | 181.6 | — | 5.0 | DOWN | `donchian_breakout` |
-| **TSLA** | 2026-11-05 | **HOLD LONG** | LONG | 343.69 | 310.81 | 1.4 | DOWN | `ma_cross` |
+| **GOLD** | 2026-11-09 | **STAY FLAT** | FLAT | 4122.1 | — | 76.4 | DOWN | `tsmom` |
+| **NVDA** | 2026-11-09 | **STAY FLAT** | FLAT | 178.67 | — | 17.1 | DOWN | `donchian_breakout` |
+| **TSLA** | 2026-11-09 | **HOLD LONG** | LONG | 378.05 | 343.6 | 68.7 | DOWN | `ma_cross` |
 
 Strategy parameters and out-of-sample stats: see `results/best_params.json` and `results/BACKTEST_REPORT.md`.
 
