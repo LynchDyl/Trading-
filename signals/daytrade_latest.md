@@ -1,12 +1,12 @@
-# Day-Trade Signals — 2026-11-16 23:30 UTC
+# Day-Trade Signals — 2026-11-17 22:36 UTC
 
 Strategy: `orb` {'range_mins': 15, 'stop_mode': 'half', 'allow_short': False, 'rvol_min': 1.5} — every order is a 2:1 reward:risk bracket, flat by 15:55 ET. Sized for a £30 account risking 1.5% per trade (fractional shares).
 
 | Symbol | Side | Status | Entry | Stop | Target (2R) | Risk % | Position £ | Last |
 |---|---|---|---|---|---|---|---|---|
-| **NIO** | LONG | ARMED | 2.87 | 2.82 | 2.96 | 1.57% | £28.70 | 2.73 |
-| **COIN** | LONG | TRIGGERED | 121.80 | 120.26 | 124.88 | 1.26% | £30.00 | 119.84 |
-| **RIVN** | LONG | TRIGGERED | 12.20 | 12.08 | 12.44 | 0.98% | £30.00 | 12.10 |
+| **NKE** | LONG | ARMED | 40.68 | 40.12 | 41.80 | 1.38% | £30.00 | 35.86 |
+| **DIS** | LONG | TRIGGERED | 120.83 | 119.54 | 123.41 | 1.07% | £30.00 | 116.94 |
+| **JPM** | LONG | TRIGGERED | 334.75 | 333.54 | 337.18 | 0.36% | £30.00 | 329.99 |
 
 3 setups. TRIGGERED = already through the entry level; ARMED = stage a stop-entry order at the level. One position at a time on a small account — prefer the first TRIGGERED signal.
 
