@@ -1,4 +1,4 @@
-# TJR Setups — 2026-11-25 23:15 UTC
+# TJR Setups — 2026-11-26 23:15 UTC
 
 > ⚠️ **PAPER TRADING ONLY.** The backtest found no positive expectancy for this pattern after costs (see `results/TJR_REPORT.md`). Track it, don't fund it.
 
